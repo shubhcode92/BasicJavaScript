@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock Project</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 230px;
+        }
+
+        .clock {
+            border: 1px solid black;
+            background-color: yellow;
+            padding: 20px 25px;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button> <a href="/">Home</a></button>
+        <button> <a href="/">YouTube Channel</a></button>
+    </div>
+    <div class="center">
+        <h2>Digital Clock</h2>
+        <div class="clock"></div>
+    </div>
+
+    <script>
+        const clock = document.getElementsByClassName("clock")
+        setInterval(function() {
+            const date = new Date();
+            clock[0].innerHTML = date.toLocaleTimeString();
+        }, 1000)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Change Project</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .parent {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 440px;
+        }
+
+        .child {            
+            padding: 80px 80px;
+            outline: 1px solid black;
+        }
+        #first {
+            background-color: red;
+        }
+        #two {
+            background-color: rgb(0, 140, 255);
+        }
+        #three {
+            background-color: rgb(255, 0, 179);
+        }
+        #four {
+            background-color: rgb(255, 174, 0);
+        }
+
+        .custom {
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <button> <a href="/">Home</a></button>
+        <button> <a href="/">YouTube Channel</a></button>
+    </div>
+    <div class="container">
+        <h2>Choose to Change color</h2>
+    </div>
+    <div class="parent">
+        <div class="child" id="first"></div>
+        <div class="child" id="two"></div>
+        <div class="child" id="three"></div>
+        <div class="child" id="four"></div>
+    </div>
+    <div class="custom">
+        <h1>Choose custom color</h1>
+        <input type="color">
+        <button>Click To change</button>
+    </div>
+    <script>
+        const child = document.querySelectorAll(".child");
+        const body = document.querySelector('body');
+
+        child[0].addEventListener("click", (e) => {
+            document.body.style.backgroundColor = window.getComputedStyle(child[0]).backgroundColor;
+        })
+        child[1].addEventListener("click", (e) => {
+            document.body.style.backgroundColor = window.getComputedStyle(child[1]).backgroundColor;
+        })
+        child[2].addEventListener("click", (e) => {
+            document.body.style.backgroundColor = window.getComputedStyle(child[2]).backgroundColor;
+        })
+        child[3].addEventListener("click", (e) => {
+            document.body.style.backgroundColor = window.getComputedStyle(child[3]).backgroundColor;
+        })
+        
+        
+        const input = document.querySelector("input");
+        console.log(`${input.value}`);
+        document.querySelector('button').addEventListener('click', () => {
+            document.body.style.backgroundColor = `${input.value}`;
+        })
+
+
+
+    </script>
+</body>
+</html>

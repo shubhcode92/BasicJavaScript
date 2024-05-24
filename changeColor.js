@@ -1,18 +1,23 @@
-function change() {
-    document.body.style.background = document.body.style.background == "white" ? "black" : "white";
-    document.body.style.color = document.body.style.color == "black" ? "white" : "black";
-}
+document.querySelector('button').addEventListener("click", () => {
+    
+});
 
-function addTag() {
-    let divs = document.querySelectorAll(".first-para");
-    console.log(divs[0]);
 
-    let btn = document.createElement("button");
-    btn.innerText = "Click Me!";
-    btn.style.color = "red";
-    btn.style.backgroundColor = "white";
+const child = document.querySelectorAll('.proj');
 
-    let div = document.querySelector(".second-para");
-    div.append(btn);
-    // addTag();
-}
+
+child[0].addEventListener("click", () => {
+    console.log(0);
+})
+child[1].addEventListener("click", () => {
+    console.log(1);
+})
+child[2].addEventListener("click", () => {
+    console.log(2);
+})
+child[3].addEventListener("click", () => {
+    console.log(3);
+})
+
+
+
